@@ -16,7 +16,7 @@ import Header from '../../components/Header/Header';
 import ContestSideBar from '../../components/ContestSideBar/ContestSideBar';
 import styles from './ContestPage.module.sass';
 import OfferBox from '../../components/OfferBox/OfferBox';
-import OfferForm from '../../components/OfferForm/OfferForm';
+import OfferForm from '../../components/forms/OfferForm/OfferForm';
 import CONSTANTS from '../../constants';
 import Brief from '../../components/Brief/Brief';
 import Spinner from '../../components/Spinner/Spinner';
@@ -129,69 +129,70 @@ class ContestPage extends React.Component {
           />
           )}
           <Header />
-          {error ? <div className={styles.tryContainer}><TryAgain getData={getData} /></div>
-            : (
-              isFetching
-                ? (
+          {error ? 
+            <div className={styles.tryContainer}>
+              <TryAgain getData={getData} />
+            </div> : 
+            (
+              isFetching? (
                   <div className={styles.containerSpinner}>
                     <Spinner />
                   </div>
                 )
-                : (
+                : 
+                (
                   <div className={styles.mainInfoContainer}>
                     <div className={styles.infoContainer}>
                       <div className={styles.buttonsContainer}>
                         <span
                           onClick={() => changeContestViewMode(true)}
-                          className={classNames(styles.btn, { [styles.activeBtn]: isBrief })}
-                        >
-Brief
-</span>
+                          className={classNames(styles.btn, { [styles.activeBtn]: isBrief })}>
+                          Brief
+                        </span>
                         <span
                           onClick={() => changeContestViewMode(false)}
-                          className={classNames(styles.btn, { [styles.activeBtn]: !isBrief })}
-                        >
-Offer
-</span>
+                          className={classNames(styles.btn, { [styles.activeBtn]: !isBrief })}>
+                          Offer
+                        </span>
                       </div>
                       {
-                                        isBrief
-                                          ? <Brief contestData={contestData} role={role} goChat={this.goChat} />
-                                          : (
-                                            <div className={styles.offersContainer}>
-                                              {(role === CONSTANTS.CREATOR && contestData.status === CONSTANTS.CONTEST_STATUS_ACTIVE)
-                                                && (
-                                                <OfferForm
-                                                  contestType={contestData.contestType}
-                                                  contestId={contestData.id}
-                                                  customerId={contestData.User.id}
-                                                />
-                                                )}
-                                              {setOfferStatusError && (
-                                              <Error
-                                                data={setOfferStatusError.data}
-                                                status={setOfferStatusError.status}
-                                                clearError={clearSetOfferStatusError}
-                                              />
-                                              )}
-                                              <div className={styles.offers}>
-                                                {this.setOffersList()}
-                                              </div>
-                                            </div>
-                                          )
-}
-                    </div>
-                    <ContestSideBar
-                      contestData={contestData}
-                      totalEntries={offers.length}
-                    />
+                        isBrief? 
+                          <Brief contestData={contestData} 
+                                 role={role} 
+                                 goChat={this.goChat} /> : (
+                            <div className={styles.offersContainer}>
+                              {
+                                (role === CONSTANTS.CREATOR && contestData.status === CONSTANTS.CONTEST_STATUS_ACTIVE)
+                                && (
+                                  <OfferForm
+                                  contestType={contestData.contestType}
+                                  contestId={contestData.id}
+                                  customerId={contestData.User.id}/>
+                                )
+                              }
+                              {
+                                setOfferStatusError && (
+                                <Error
+                                  data={setOfferStatusError.data}
+                                  status={setOfferStatusError.status}
+                                  clearError={clearSetOfferStatusError}/>
+                                )
+                              }
+                              <div className={styles.offers}>
+                                {this.setOffersList()}
+                              </div>
+                            </div>
+                          )}
+                  </div>
+                    <ContestSideBar contestData={contestData} totalEntries={offers.length}/>
                   </div>
                 )
-            )}
+            )
+          }
         </div>
       );
     }
-}
+  }
 
 const mapStateToProps = (state) => {
   const { contestByIdStore, userStore, chatStore } = state;
