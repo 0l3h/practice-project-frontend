@@ -5,7 +5,7 @@ import CONTANTS from '../../constants';
 import { setOffer, clearAddOfferError } from '../../actions/actionCreator';
 import styles from './OfferForm.module.sass';
 import ImageUpload from '../InputComponents/ImageUpload/ImageUpload';
-import FormInput from '../FormInput/FormInput';
+import FormInput from '../forms/FormInput/FormInput';
 import Schems from '../../validators/validationSchems';
 import Error from '../Error/Error';
 

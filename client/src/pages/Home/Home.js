@@ -65,7 +65,7 @@ const Home = (props) => {
                     name ideas from world's largest community of naming experts.
                     With 75,000+ creatives and 15,000+ successful naming projects,
                     Squadhelp is by far the largest naming platform across the globe .
-</p>
+                  </p>
                 </div>
                 <div className={styles.card}>
                   <img
@@ -78,7 +78,7 @@ const Home = (props) => {
                     we ensure that you receive more ideas from our top-quality creatives,
                     and Gamification best practices ensure two-way communication throughout your
                     contest.
-</p>
+                  </p>
                 </div>
                 <div className={styles.card}>
                   <img
@@ -91,7 +91,7 @@ const Home = (props) => {
                     demographics to get unbiased feedback on your favorite names.
                     Also receive Trademark support from our team of Licensed Trademark Attorneys,
                     so you can pick your name with confidence.
-</p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ const Home = (props) => {
                     <span>
                         We’ll walk you through exactly what you need to share about your project
                         in order to get an awesome Name
-</span>
+                    </span>
                   </p>
                 </div>
                 <img src={`${CONSTANTS.STATIC_IMAGES_PATH}gif/1-compressed.gif`} alt="compressed" />
@@ -213,7 +213,69 @@ const Home = (props) => {
                 carouselType={carouselConstants.FEEDBACK_SLIDER}
               />
             </div>
+
+            {/* Start a contest */}
+            <div className={styles.startContest}>
+              <span className={styles.startContestText}>
+                Ready to get started? Launch a contest and start receiving submissions instantly.
+              </span> 
+              <Link to='/startContest'>
+                <i class='far fa-lightbulb'></i> Start A Contest
+              </Link>
+            </div>
+
+            {/* Pricing */}
+            <div className={styles.pricing}>
+
+              {/* Advantages */}
+              <div className={styles.advantagesSection}>
+
+                <div className={styles.advantage}>
+                  <span className={styles.icon}>
+                    <i class='fas fa-angle-right'></i>
+                  </span>
+                  <div>
+                    <h4>Pay a Fraction of cost vs hiring an agency</h4>
+                    <p className={styles.pricingInfo}>
+                      For as low as $299, our naming contests and marketplace allow you to get an amazing brand quickly and affordably.
+                    </p>
+                  </div>
+                </div>
+
+                <hr/>
+
+                <div className={styles.advantage}>
+                  <span className={styles.icon}>
+                    <i class='fas fa-angle-right'></i>
+                  </span>
+                  <div>
+                    <h4>Satisfaction Guarantee</h4>
+                    <p className={styles.pricingInfo}>
+                      Of course! We have policies in place to ensure that you are satisfied with your experience. 
+                      <a className={styles.learnMoreLink} href='#'> Learn more</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contacts info */}
+              <div className={styles.contactsSection}>
+                <h4>Questions?</h4>
+                <p >
+                  Speak with a Squadhelp platform expert to learn more and get your questions answered.
+                </p>
+                <a className={styles.scheduleLink} href='#'>
+                  Schedule Consultation
+                </a>
+                <a className={styles.phoneNumber} href={`tel: ${CONSTANTS.CONTACTS.PHONE_NUMBER}`}>
+                  <i class="fas fa-phone-volume"></i>
+                  {CONSTANTS.CONTACTS.PHONE_NUMBER}
+                </a>
+                Call us for assistance
+              </div>
+            </div>
           </div>
+          
           <Footer />
         </>
       )}

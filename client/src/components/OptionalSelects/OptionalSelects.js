@@ -1,7 +1,7 @@
 import React from 'react';
 import CONSTANTS from '../../constants';
 import SelectInput from '../SelectInput/SelectInput';
-import FormInput from '../FormInput/FormInput';
+import FormInput from '../forms/FormInput/FormInput';
 import styles from '../ContestForm/ContestForm.module.sass';
 import Spinner from '../Spinner/Spinner';
 

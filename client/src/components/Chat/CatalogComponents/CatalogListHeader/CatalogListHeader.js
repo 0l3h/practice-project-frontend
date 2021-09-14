@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Formik, Form } from 'formik';
 import { changeShowModeCatalog, changeRenameCatalogMode, changeCatalogName } from '../../../../actions/actionCreator';
 import styles from './CatalogHeader.module.sass';
-import FormInput from '../../../FormInput/FormInput';
+import FormInput from '../../../forms/FormInput/FormInput';
 import Schems from '../../../../validators/validationSchems';
 
 const CatalogListHeader = (props) => {
