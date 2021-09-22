@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './FAQsArticle.module.sass';
-import CONSTANTS from './../../../constants';
+import CONSTANTS from '../../../constants';
 
 function FAQsArticle() {
     return (
