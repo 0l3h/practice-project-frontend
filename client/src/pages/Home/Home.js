@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
+import AgencyLevelExperience from './AgencyLevelExperience/AgencyLevelExperience';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
@@ -206,6 +207,8 @@ const Home = (props) => {
             <div className={styles.button}>
               <Link className={styles.button__link} to="/dashboard">DASHBOARD</Link>
             </div>
+            <div className={styles.agencyContainer}>
+            </div>
             <div className={styles.blueContainer}>
               <h2 className={styles.whiteUnderline}>What our customers say</h2>
               <SlideBar
@@ -213,6 +216,7 @@ const Home = (props) => {
                 carouselType={carouselConstants.FEEDBACK_SLIDER}
               />
             </div>
+            <AgencyLevelExperience/>
 
             {/* Start a contest */}
             <div className={styles.startContest}>
