@@ -1,0 +1,73 @@
+.planStyle
+    box-sizing: border-box
+    width: 23%
+
+    a 
+        color: white
+        text-decoration: none
+        min-width: 100%
+
+.startButton
+    box-sizing: border-box
+    width: 100%
+    padding: 12px 10px
+    color: white
+    border-radius: 5px
+    text-align: center
+
+.price
+    text-align: right
+
+h3
+    font-size: 32px
+    font-weight: 500
+
+.description
+    color: grey
+    line-height: 20px
+
+.sublistItemIcon
+    font-size: 8px
+    margin-left: 12px
+    margin-right: 6px
+
+.advantage
+    position: relative
+    list-style: none
+    padding: 12px 0
+    line-height: 20px
+    border-top: 2px solid #dbdbdb
+    font-size: 14px
+   
+    &:first-child
+        border-top: none
+
+    &::after:not([data-tooltip="undefined"])
+        font-size: 16px
+        position: absolute
+        left: 100%
+        width: 200px
+        pointer-events: none
+        content: attr(data-tooltip)
+        transform: translateY(-50%)
+        box-shadow: 0 2px 5px grey
+        background-color: white
+        padding: 20px
+        opacity: 0
+        z-index: 10
+        transition: .3s
+
+    &:hover::after
+        opacity: 1
+
+.featureSublist
+    font-size: 12px
+
+.plan 
+    min-height: 200px
+
+    &:hover
+        box-shadow: 0 8px 6px 8px rgba(0, 0, 0, 0.267) 
+    
+    *
+        padding: 10px

@@ -1,0 +1,119 @@
+[
+    {
+        "planName": "Bronze",
+        "description": "Branding on a budget",
+        "price": {
+            "amount": 299,
+            "currency": "US$"
+        },
+        "advantages": [
+            {
+                "text": "Prize to Winner - $135 (Included)",
+                "tooltip": "Paid to the winning creative at the end of contest. This amount is already included in your package price."
+            },
+            {
+                "text": "Expected 30+ Entries",
+                "tooltip": "Complimentary extension of timeline if you receive less than expected numbers number of entries."
+            }
+        ]
+    },
+    {
+        "planName": "Gold",
+        "description": "Increase participation and basic brand validation",
+        "price": {
+            "amount": 449,
+            "currency": "US$"
+        },
+        "advantages": [
+            {
+                "text": "Prize to Winner - $225 (Included)",
+                "tooltip": "Paid to the winning creative at the end of contest. This amount is already included in your package price."
+            },
+            {
+                "text": "Validation Services & Upgrades ($267 value)",
+                "tooltip": "Our agency-style validation features and upgrades provide all the tools you need to complete a succesful branding project, start to finish, and select a logo with confidence.",
+                "featureSublist": [
+                    {
+                        "text": "NDA and More Privacy",
+                        "tooltip": "Require creatives to agree to a Non Disclosure Agreement before aprticipating in your contest. Your contest details will also be hidden from search engines."
+                    },
+                    {
+                        "text": "Project Promotion (Basic)",
+                        "tooltip": "Receive priority project lsiting so your project stands out and gets more participation."
+                    } 
+                ]
+            },
+
+            {
+                "text": "Expected 50+ Entries",
+                "tooltip": "Complimentary extension of timeline if you receive less than expected numbers number of entries."
+            },
+            {
+                "text": "Partial Refund Option",
+                "tooltip": "If you are not happy with submissions, you can receive a partial refund for creative award ($225)."
+            }
+            
+        ]
+    },
+    {
+        "planName": "Platinum",
+        "description": "Work with top-level creatives, plus agency-style brand validation",
+        "price": {
+            "amount": 749,
+            "currency": "US$"
+        },
+        "advantages": [
+            {
+                "text": "Prize to Winner - $300 (Included)",
+                "tooltip": "Paid to the winning creative at the end of contest. This amount is already included in your package price."
+            },
+            {
+                "text": "Validation Services & Upgrades ($644 value)",
+                "tooltip": "Our agency-style validation features and upgrades provide all the tools you need to complete a succesful branding project, start to finish, and select a logo with confidence.",
+                "featureSublist": [
+                    {
+                        "text": "Audience Testing (Up to 5 Logos)",
+                        "tooltip": "Test your top 5 Logos with your target demographics and receive detailed insights to pick the best options."
+                    },
+                    {
+                        "text": "Tier A Creatives",
+                        "tooltip": "Only work with top creatives who have achieved high quality ranking on Squadhelp"
+                    },
+                    {
+                        "text": "NDA and More Privacy",
+                        "tooltip": "Require creatives to agree to a Non Disclosure Agreement before aprticipating in your contest. Your contest details will also be hidden from search engines."
+                    },
+                    {
+                        "text": "Enhanced Project Promotion",
+                        "tooltip": "Receive priority project listing so your project stands out and receive more participation. We will also announce the launch of your project to our entire community via email."
+                    },
+                    {
+                        "text": "Team Collaboration Tools",
+                        "tooltip": "Invite your team-members to co-manage your contest."
+                    }
+                ]
+            },
+            {
+                "text": "Expected 60+ Entries",
+                "tooltip": "Complimentary extension of timeline if you receive less than expected numbers number of entries."
+            },
+            {
+                "text": "Partial Refund Option",
+                "tooltip":"If you are not happy with submissions, you can receive a partial refund for creative award ($225)."
+            }
+        ] 
+    },
+    {
+        "planName": "Managed",
+        "description": "A full agency experience without the agency price tag",
+        "price": {
+            "amount": 1199,
+            "currency": "US$"
+        },
+        "advantages": [
+            {
+                "text": "Receive optimum results from your Platinum Contest by launching a Managed Contest Package and working one-on-one with an experienced Squadhelp Branding Consultant. With significantly more validation services, professional brief creation, and daily management of your contest by your Branding Expert, you'll receive an enhanced branding experience to closeout your branding project."
+            }
+        ] 
+    }
+]
