@@ -40,3 +40,13 @@ export const getContestById = (data) => http.get('getContestById', {
     contestId: data.contestId,
   },
 });
+
+const transactions = [
+  {id: 1, date: '2021-08-31', operationType: 'INCOME', amount: 10},
+  {id: 2, date: '2021-09-01', operationType: 'INCOME', amount: 10},
+  {id: 3, date: '2021-10-04', operationType: 'INCOME', amount: 10},
+]
+
+export const getTransactions = () => {
+  return { data: transactions };
+}
