@@ -28,32 +28,38 @@ class Header extends React.Component {
         return (
           <>
             <div className={styles.userInfo}>
-              <img
-                src={this.props.data.avatar === 'anon.png' ? CONSTANTS.ANONYM_IMAGE_PATH : `${CONSTANTS.publicURL}${this.props.data.avatar}`}
-                alt="user"
-              />
+              <img src={this.props.data.avatar === 'anon.png' ? 
+                CONSTANTS.ANONYM_IMAGE_PATH 
+                : 
+                `${CONSTANTS.publicURL}${this.props.data.avatar}`} alt="user"/>
+
               <span>{`Hi, ${this.props.data.displayName}`}</span>
               <img src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`} alt="menu" />
               <ul>
                 <li>
-                  <Link
-                    to="/dashboard"
-                    style={{ textDecoration: 'none' }}
-                  >
+                  <Link to="/dashboard" style={{ textDecoration: 'none' }}>
                     <span>View Dashboard</span>
                   </Link>
                 </li>
-                <li><Link to="/account" style={{ textDecoration: 'none' }}><span>My Account</span></Link></li>
                 <li>
-                  <Link
-                    to="http:/www.google.com"
-                    style={{ textDecoration: 'none' }}
-                  >
+                  <Link to="/account" style={{ textDecoration: 'none' }}>
+                    <span>My Account</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/transactions" style={{ textDecoration: 'none' }}>
+                    <span>Transactions</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="http:/www.google.com" style={{ textDecoration: 'none' }}>
                     <span>Messages</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="http:/www.google.com" style={{ textDecoration: 'none' }}><span>Affiliate Dashboard</span></Link>
+                  <Link to="http:/www.google.com" style={{ textDecoration: 'none' }}>
+                    <span>Affiliate Dashboard</span>
+                  </Link>
                 </li>
                 <li><span onClick={this.logOut}>Logout</span></li>
               </ul>
@@ -128,21 +134,20 @@ class Header extends React.Component {
                     />
                     <ul>
                       <li><a href="http://www.google.com">HOW IT WORKS</a></li>
-                      <li><a href="http://www.google.com">PRICING</a></li>
+                      <li><Link to='/pricing'>PRICING</Link></li>
                       <li><a href="http://www.google.com">AGENCY SERVICE</a></li>
                       <li><a href="http://www.google.com">ACTIVE CONTESTS</a></li>
                       <li><a href="http://www.google.com">WINNERS</a></li>
                       <li><a href="http://www.google.com">LEADERBOARD</a></li>
                       <li className={styles.last}>
                         <a href="http://www.google.com">
-                            BECOME A
-                            CREATIVE
-</a>
+                          BECOME A CREATIVE
+                        </a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <span>Our Work</span>
+                    <span>OUR WORK</span>
                     <img
                       src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                       alt="menu"
@@ -157,7 +162,7 @@ class Header extends React.Component {
                     </ul>
                   </li>
                   <li>
-                    <span>Names For Sale</span>
+                    <span>NAMES FOR SALE</span>
                     <img src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`} alt="menu" />
                     <ul>
                       <li><a href="http://www.google.com">POPULAR NAMES</a></li>
@@ -167,14 +172,13 @@ class Header extends React.Component {
                       <li><a href="http://www.google.com">VISUAL NAME SEARCH</a></li>
                       <li className={styles.last}>
                         <a href="http://www.google.com">
-                            SELL YOUR
-                            DOMAINS
-</a>
+                          SELL YOUR DOMAINS
+                        </a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <span>Blog</span>
+                    <span>BLOG</span>
                     <img
                       src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                       alt="menu"
