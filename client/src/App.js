@@ -17,6 +17,8 @@ import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+import ContestPricing from './pages/ContestPricing/ContestPricing';
+import TransactionPage from './pages/TransactionPage/TransactionPage';
 
 class App extends Component {
   render() {
@@ -66,6 +68,8 @@ class App extends Component {
           <Route exact path="/dashboard" component={withAuthUser(Dashboard)} />
           <Route exact path="/contest/:id" component={withAuthUser(ContestPage)} />
           <Route exact path="/account" component={withAuthUser(UserProfile)} />
+          <Route exact path="/pricing" component={ContestPricing}/>
+          <Route exact path="/transactions" component={withAuthUser(TransactionPage)}/>
           <Route component={NotFound}/>
         </Switch>
         <ChatContainer />
