@@ -1,13 +1,16 @@
 const express = require('express');
-const basicMiddlewares = require('../middlewares/basicMiddlewares');
-const hashPass = require('../middlewares/hashPassMiddle');
-const userController = require('../controllers/userController');
-const contestController = require('../controllers/contestController');
-const checkToken = require('../middlewares/checkToken');
-const validators = require('../middlewares/validators');
-const chatController = require('../controllers/chatController');
-const upload = require('../utils/fileUpload');
+const basicMiddlewares = require('./middlewares/basicMiddlewares');
+const userController = require('./controllers/userController');
+const checkToken = require('./middlewares/checkToken');
+const validators = require('./middlewares/validators');
+const chatController = require('./controllers/chatController');
+const upload = require('./utils/fileUpload');
+const contestController = require('./controllers/contestController');
+const contestRouter = require('./routes/contestRouter');
 const router = express.Router();
+const hashPass = require('./middlewares/hashPassMiddle');
+
+router.use('/contests', contestRouter);
 
 router.post(
   '/registration',
@@ -23,12 +26,6 @@ router.post(
 );
 
 router.post(
-  '/dataForContest',
-  checkToken.checkToken,
-  contestController.dataForContest,
-);
-
-router.post(
   '/pay',
   checkToken.checkToken,
   basicMiddlewares.onlyForCustomer,
@@ -36,26 +33,6 @@ router.post(
   basicMiddlewares.parseBody,
   validators.validateContestCreation,
   userController.payment,
-);
-
-router.post(
-  '/getCustomersContests',
-  checkToken.checkToken,
-  contestController.getCustomersContests,
-);
-
-router.get(
-  '/getContestById',
-  checkToken.checkToken,
-  basicMiddlewares.canGetContest,
-  contestController.getContestById,
-);
-
-router.post(
-  '/getAllContests',
-  checkToken.checkToken,
-  basicMiddlewares.onlyForCreative,
-  contestController.getContests,
 );
 
 router.post(
@@ -67,13 +44,6 @@ router.get(
   '/downloadFile/:fileName',
   checkToken.checkToken,
   contestController.downloadFile,
-);
-
-router.post(
-  '/updateContest',
-  checkToken.checkToken,
-  upload.updateContestFile,
-  contestController.updateContest,
 );
 
 router.post(

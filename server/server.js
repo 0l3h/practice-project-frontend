@@ -1,5 +1,4 @@
 const http = require('http')
-require('./models/mongoModels')
 const controller = require('./socketInit')
 const app = require('./app');
 
